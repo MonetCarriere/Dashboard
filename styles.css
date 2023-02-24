@@ -1,0 +1,38 @@
+body{
+margin: 0;
+padding: 0;
+}
+
+
+.grid-container{
+display: grid;
+grid-template-columns: 260px 1fr 1fr 1fr;
+grid-template-rows: 0.2fr 3fr;
+grid-template-areas:
+"sidebar header header header"
+"sidebar main main main"
+"sidebar footer footer footer";
+height: 100vh;
+}
+
+/*HEADER*/
+.header{
+grid-area: header;
+height: 70px;
+background-color: lightcoral;
+}
+
+/*SIDEBAR*/
+#sidebar{
+grid-area: sidebar;
+height: 100%;
+background: grey;
+}
+
+/*MAIN*/
+.main{
+grid-area: main;
+height: 100%;
+background: lightseagreen;
+}
+
