@@ -67,12 +67,51 @@ body {
 #sidebar {
     grid-area: sidebar;
     height: 100%;
-    background: 21232d;
+    background: #21232d;
     color: #9799ab;
     overflow-y: auto;
     transition: all 0.5s;
     --webkit-transition: all 0.5s;
 }
+
+.sidebar-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.sidebar-title > span {
+    display: none;
+}
+
+.sidebar-brand{
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.sidebar-list{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.sidebar-list-item{
+    padding: 20px;
+}
+
+.sidebar-list-item:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.sidebar-responsive{
+    display: inline !important;
+    position: absolute;
+}
+
 
 /*MAIN*/
 .main {
@@ -80,4 +119,16 @@ body {
     height: 100%;
     overflow-y: auto;
     padding: 20px 20px;
+}
+
+::--webkit-scrollbar {
+    width: 2em;
+}
+
+::--webkit-scrollbar-track {
+    background: hsl(120 75% 50%/1);
+}
+
+::--webkit-scrollbar-thumb{
+    background: hsl(120 100% 20%/1); 
 }
